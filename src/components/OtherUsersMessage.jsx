@@ -1,7 +1,7 @@
 const OtherUsersMessage = ({ lastMessage, message }) => {
       // tells us if this is the first message by the user
       const isFirstMessageByUser =
-            !lastMessage || lastMessage.sener.username !== message.sender.username;
+            !lastMessage || lastMessage.sender.username !== message.sender.username;
 
       return (
         <div className="message=row">

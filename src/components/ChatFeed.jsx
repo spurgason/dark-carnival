@@ -8,7 +8,9 @@ const ChatFeed = (props) => {
 	// creates a chat variable and looks to see if there are any active chats
 	const chat = chats && chats[activeChat];
 
+	// this function leaves a read receipt using their avatar on the last message, or last message they viewed
 	const renderReadReceipts = (message, isMyMessage) => {
+		// maps through all the people in the chat using their ids to tag a read receipt the the most recent message they have seen 
 		return chat.people.map(
 			(person, index) =>
 				person.last_read === message.id && (
@@ -25,14 +27,22 @@ const ChatFeed = (props) => {
 	};
 
 	const renderMessages = () => {
+		// allows the application to fetch messages through a key tied to each message
 		const keys = Object.keys(messages);
 
+		// this renders the messages 
 		return keys.map((key, index) => {
+			// allows us to specify a message
 			const message = messages[key];
+			// finds the last message in the chat
 			const lastMessageKey = index === 0 ? null : key[index - 1];
+			// stores the users sent messages so they can identify which is theirs
 			const isMyMessage = userName === message.sender.username;
 
 			return (
+
+				// creates a specified key that uses the messages index
+				// this is the message bubble
 				<div key={`msg_${index}`} style={{ width: "100%" }}>
 					<div className="message-block">
 						{isMyMessage ? (
@@ -58,14 +68,17 @@ const ChatFeed = (props) => {
 		});
 	};
 
+	// if chat has not rendered just return it is loading
 	if (!chat) return "Loading...";
 
 	return (
 		<div className="chat-feed">
 			<div className="chat-title-container">
+				{/* Title of the chat room */}
 				<div className="chat-title">{chat?.title}</div>
 				<div className="chat-subtitle">
-					{chat.people.map((person) => `${person.person.username}`)}
+					{/* This just returns the users names under the title to view who is active */}
+					{chat.people.map((person) => ` ${person.person.username}`)}
 				</div>
 			</div>
 			{renderMessages()}
