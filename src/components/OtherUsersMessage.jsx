@@ -11,6 +11,7 @@ const OtherUsersMessage = ({ lastMessage, message }) => {
               style={{ backgroundImage: `url (${message?.sender?.avatar})` }}
             />
           )}
+          {/* checks to see if message is text or image */}
           {message?.attachments?.length > 0 ? (
             <img
               src={message.attachment[0].file}
@@ -19,6 +20,7 @@ const OtherUsersMessage = ({ lastMessage, message }) => {
               style={{ marginLeft: isFirstMessageByUser ? "4px" : "48px" }}
             />
           ) : (
+            //if it is not an image then it is a text message 
             <div
               className="message"
               style={{
