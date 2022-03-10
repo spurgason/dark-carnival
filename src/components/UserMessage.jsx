@@ -14,17 +14,17 @@ const UserMessage = ({ message }) => {
 
       // this returns the users messages that they send/sent in the chat
       return (
-            <div
-                  className="message"
-                  style={{
-                        float: "right",
-                        marginRight: "18px",
-                        color: "white",
-                        backgroundColor: "black",
-                  }}
-            >
-                  {message.text}
-            </div>
+        <div
+          className="message"
+          style={{
+            float: "right",
+            marginRight: "18px",
+            color: "#36393e",
+            backgroundColor: "#ffd166",
+          }}
+        >
+          {message.text}
+        </div>
       );
 };
 
