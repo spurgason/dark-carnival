@@ -33,7 +33,10 @@
 
 .ce-text-input {
   border-radius: 6px !important;
-  border: 1px solid #3b2a50 !important;
+  border: 2px solid #ffd166 !important;
+  background-color: #36393e !important;
+  color: #ffd166;
+  margin-bottom: 4px;
 }
 
 .ce-primary-button {
@@ -55,6 +58,7 @@
 .ce-settings {
   background-color: #36393e !important;
   border-left: 2px solid #ffd166 !important;
+  overflow: hidden;
 }
 
 .ce-person-container {
@@ -69,6 +73,11 @@
   background-color: #36393e !important;
   color: #ffd166;
   border-bottom: 2px solid #ffd166;
+  border-top: none !important;
+}
+
+.ce-settings-container div,
+.ce-photo-section {
   border-top: none !important;
 }
 
