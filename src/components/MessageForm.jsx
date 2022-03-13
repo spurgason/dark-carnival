@@ -29,28 +29,32 @@ const MessageForm = (props) => {
       };
 
       return (
-            <form className="message-form" onSubmit={handleSubmit}>
-                  <input
-                        className="message-input"
-                        placeholder="Message..."
-                        value={value}
-                        onChange={handleChange}
-                        onSubmit={handleSubmit}
-                  />
-                  <label htmlFor="upload-button">
-                        <span className="image-button">
-                              <p>Pic</p>
-                        </span>
-                  </label>
-                  <input
-                        type="file"
-                        multiple={false}
-                        id="upload-button"
-                        style={{ display: "none" }}
-                        onChange={handleUpload}
-                  />
-                  <button type="submit" className="send-button">Send</button>
-            </form>
+        <div className="message-form-container">
+          <form className="message-form" onSubmit={handleSubmit}>
+            <input
+              className="message-input"
+              placeholder="Message..."
+              value={value}
+              onChange={handleChange}
+              onSubmit={handleSubmit}
+            />
+            <label htmlFor="upload-button">
+              <span className="image-button">
+                <i class="bi bi-image"></i>
+              </span>
+            </label>
+            <input
+              type="file"
+              multiple={false}
+              id="upload-button"
+              style={{ display: "none" }}
+              onChange={handleUpload}
+            />
+            <button type="submit" className="send-button">
+              <i class="bi bi-send-fill"></i>
+            </button>
+          </form>
+        </div>
       );
 };
 
