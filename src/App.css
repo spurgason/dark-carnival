@@ -35,7 +35,7 @@
   border-radius: 6px !important;
   border: 2px solid #ffd166 !important;
   background-color: #36393e !important;
-  color: #ffd166;
+  color: lightgray;
   margin-bottom: 4px;
 }
 
@@ -151,15 +151,9 @@
   display: inline-block;
 }
 
-.message-avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 22px;
-  color: white;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 48px;
+.message-username {
+ color: #ffd166;
+ padding-left: 10px;
 }
 
 .message {
@@ -174,7 +168,6 @@
   object-fit: cover;
   border-radius: 6px;
   height: 30vw;
-  /* width: 30vw; */
   max-height: 200px;
   max-width: 200px;
   min-height: 100px;
@@ -187,13 +180,15 @@
 }
 
 .read-receipt {
-  width: 13px;
-  height: 13px;
+  width: 25px;
+  height: 25px;
   border-radius: 13px;
   margin: 1.5px;
+  margin-top: 5px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 14px;
+  background-size: 20px;
+  background-color: lightgray;
 }
 
 .message-form-container {
@@ -207,32 +202,39 @@
 .message-form {
   overflow: hidden;
   border-radius: 6px;
-  border: 1px solid #ffd166;
-  background-color: white;
+  border: 2px solid #ffd166;
+  background-color: #36393e;
 }
 
 .message-input {
   height: 40px;
   width: calc(100% - 132px);
-  background-color: white;
-  border: 1px solid white;
+  background-color: #36393e;
+  border: 1px solid #36393e;
   padding: 0px 18px;
   outline: none;
   font-size: 15px;
+  color: lightgray;
+}
+
+::placeholder {
+  color: lightgray;
 }
 
 .image-button {
   cursor: pointer;
   padding: 0px 12px;
   height: 100%;
+  color: lightgray;
 }
 
 .send-button {
   height: 42px;
-  background-color: white;
-  border: 1px solid white;
+  background-color: #36393e;
+  border: 1px solid #36393e;
   padding: 0px 18px;
   cursor: pointer;
+  color: lightgray;
 }
 
 .send-icon {
@@ -245,4 +247,95 @@
   top: 1px;
   position: relative;
   font-size: 14px;
+}
+
+/* Login Style */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62, 5%;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  background: #36393e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  color: #36393e;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 90%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+  outline: none;
+  margin-bottom: 25px;
+}
+
+.form {
+  width: 400px;
+}
+
+.title {
+  text-align: center;
+  color: #ffd166;
+  margin-bottom: 30px;
+  width: 100%;
+  font-size: 2.3em;
+}
+
+.button {
+  border-radius: 4px;
+  border: none;
+  background-color: #ffd166;
+  color: #36393e;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin: 5px;
+  width: 90%;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.error {
+  color: #ff6961;
+  text-align: center;
+  margin-top: 20px;
 }

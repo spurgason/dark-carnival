@@ -16,10 +16,10 @@ const ChatFeed = (props) => {
 				person.last_read === message.id && (
 					<div
 						key={`read_${index}`}
-						className="read-receipts"
+						className="read-receipt"
 						style={{
 							float: isMyMessage ? "right" : "left",
-							backgroundImage: `url (${person?.person?.avatar})`,
+							backgroundImage: `url(${person?.person?.avatar})`,
 						}}
 					/>
 				)
