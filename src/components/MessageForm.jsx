@@ -25,7 +25,7 @@ const MessageForm = (props) => {
 
       // allows users to upload and send pictures in the chat
       const handleUpload = (event) => {
-            sendMessage(creds, chatId, { flies: event.target.files, text: "" });
+            sendMessage(creds, chatId, { files: event.target.files, text: "" });
       };
 
       return (
@@ -38,18 +38,18 @@ const MessageForm = (props) => {
               onChange={handleChange}
               onSubmit={handleSubmit}
             />
-            {/* <label htmlFor="upload-button">
+            <label htmlFor="upload-button">
               <span className="image-button">
                 <i class="bi bi-image"></i>
               </span>
-            </label> */}
-            {/* <input
+            </label>
+            <input
               type="file"
               multiple={false}
               id="upload-button"
               style={{ display: "none" }}
               onChange={handleUpload}
-            /> */}
+            />
             <button type="submit" className="send-button">
               <i class="bi bi-send-fill"></i>
             </button>
