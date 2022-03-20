@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dark-carnival/static/css/main.0fe1f81c.css",
+    "main.js": "/dark-carnival/static/js/main.ce3bece4.js",
+    "static/media/bootstrap-icons.woff?": "/dark-carnival/static/media/bootstrap-icons.c1d7432ee75fa194e499.woff",
+    "static/media/bootstrap-icons.woff2?": "/dark-carnival/static/media/bootstrap-icons.a13b815539b49de48d23.woff2",
+    "index.html": "/dark-carnival/index.html",
+    "main.0fe1f81c.css.map": "/dark-carnival/static/css/main.0fe1f81c.css.map",
+    "main.ce3bece4.js.map": "/dark-carnival/static/js/main.ce3bece4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0fe1f81c.css",
+    "static/js/main.ce3bece4.js"
+  ]
+}
